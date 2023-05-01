@@ -2,17 +2,20 @@ import { Injectable, inject } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivateChildFn, CanActivateFn, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { catchError, map, of } from 'rxjs';
 import { UserService } from '../service/user.service';
+import { AuthService } from '../service/auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthGuard {
-  authService: any;
+  userService: any;
   router: any;
+  authService: any;
 
   constructor() {
-    this.authService = inject(UserService);
+    this.userService = inject(UserService);
     this.router = inject(Router);
+    this.authService = inject(AuthService);
   }
 
 
@@ -20,7 +23,7 @@ export class AuthGuard {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot) => {
 
-      if (this.authService.getTokenUser()) {
+      if (this.userService.getTokenUser() && this.authService.isLoggedIn) {
         return true;
       }
       this.router.navigate(['login']);
