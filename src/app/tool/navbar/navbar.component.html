@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav *ngIf="isLoggedIn$ | async" class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">To-Watch</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +20,7 @@
           <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
+        <button class="btn btn-danger" (click)="onLogout()">Cerrar Sesión</button>
       </div>
     </div>
   </nav>
