@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
-import { User } from '../model/User';
+import { User, UserRegistration } from '../model/User';
 
 
 @Injectable({
@@ -31,5 +31,9 @@ export class UserService {
 
   getTokenUser(): any {
     return localStorage.getItem('token');
+  }
+
+  userRegistration(user: UserRegistration): Observable<any> {
+    return this.http.post("http://localhost:8080/api/user/register", user);
   }
 }

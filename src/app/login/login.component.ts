@@ -28,4 +28,8 @@ export class LoginComponent {
     });
   }
 
+  register() {
+    this.router.navigateByUrl('/registration');
+  }
+
 }

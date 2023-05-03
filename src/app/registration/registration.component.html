@@ -1,0 +1,27 @@
+<div>
+    <form #form="ngForm" (ngSubmit)="registration(form)">
+        <h1>Registration</h1>
+        <div class="input-group flex-nowrap">
+            <input type="text" class="form-control" placeholder="Nombre" name="first_name" id="first_name"
+                [(ngModel)]="user.firstName">
+        </div>
+        <div class="input-group flex-nowrap">
+            <input type="text" class="form-control" placeholder="Apellidos" name="last_name" id="last_name"
+                [(ngModel)]="user.lastName">
+        </div>
+        <div class="input-group flex-nowrap">`
+            <span class="input-group-text" id="addon-wrapping">@</span>
+            <input type="text" class="form-control" placeholder="Nick de Usuario" name="login_name" id="login_name"
+                [(ngModel)]="user.loginName">
+        </div>
+        <div class="input-group flex-nowrap">
+            <input type="email" class="form-control" placeholder="Email" name="email" id="email"
+                [(ngModel)]="user.email">
+        </div>
+        <div class="input-group flex-nowrap">
+            <input type="password" class="form-control" placeholder="Password" name="password" id="password"
+                [(ngModel)]="user.password">
+        </div>
+        <button class="btn btn-primary">Registrar Usuario</button>
+    </form>
+</div>
