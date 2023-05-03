@@ -12,6 +12,7 @@ import { NavbarComponent } from './tool/navbar/navbar.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ToastComponent } from './tool/toast/toast.component';
 import { CardComponent } from './tool/card/card.component';
+import { FilmListComponent } from './media/film/film-list/film-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CardComponent } from './tool/card/card.component';
     NavbarComponent,
     RegistrationComponent,
     ToastComponent,
-    CardComponent
+    CardComponent,
+    FilmListComponent
   ],
   imports: [
     BrowserModule,
