@@ -9,13 +9,15 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './helper/auth.interceptor';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './tool/navbar/navbar.component';
+import { CardComponent } from './tool/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
