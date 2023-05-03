@@ -10,6 +10,7 @@ import { AuthInterceptor } from './helper/auth.interceptor';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './tool/navbar/navbar.component';
 import { CardComponent } from './tool/card/card.component';
+import { FilmListComponent } from './media/film/film-list/film-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CardComponent } from './tool/card/card.component';
     LoginComponent,
     HomeComponent,
     NavbarComponent,
-    CardComponent
+    CardComponent,
+    FilmListComponent
   ],
   imports: [
     BrowserModule,
