@@ -34,6 +34,6 @@ export class UserService {
   }
 
   userRegistration(user: UserRegistration): Observable<any> {
-    return this.http.post("http://localhost:8080/api/user", user);
+    return this.http.post("http://localhost:8080/api/user/register", user);
   }
 }

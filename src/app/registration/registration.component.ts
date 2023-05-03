@@ -29,7 +29,7 @@ export class RegistrationComponent {
 
   registration(form: NgForm) {
     this.userService.userRegistration(this.user).subscribe(response => {
-      toastCall();
+      // toastCall();
       this.router.navigate(['login']);
     })
   }
