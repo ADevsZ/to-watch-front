@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FilmListComponent } from './media/film/film-list/film-list.component';
 import { FilmDetailComponent } from './media/film/film-detail/film-detail.component';
+import { SearchbarComponent } from './tool/searchbar/searchbar.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
