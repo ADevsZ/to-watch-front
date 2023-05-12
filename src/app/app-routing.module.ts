@@ -6,13 +6,15 @@ import { HomeComponent } from './home/home.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FilmListComponent } from './media/film/film-list/film-list.component';
 import { FilmDetailComponent } from './media/film/film-detail/film-detail.component';
+import { ItemListComponent } from './tool/item-list/item-list.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'films', component: FilmListComponent, canActivate: [AuthGuard] },
-  { path: 'films/:id', component: FilmDetailComponent, canActivate: [AuthGuard] }
+  { path: 'films/:id', component: FilmDetailComponent, canActivate: [AuthGuard] },
+  { path: 'item_list', component: ItemListComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
