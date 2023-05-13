@@ -8,6 +8,7 @@ import { FilmListComponent } from './media/film/film-list/film-list.component';
 import { FilmDetailComponent } from './media/film/film-detail/film-detail.component';
 import { ItemListComponent } from './tool/item-list/item-list.component';
 import { UserConfigurationComponent } from './home/user-configuration/user-configuration.component';
+import { SearchbarComponent } from './tool/searchbar/searchbar.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },

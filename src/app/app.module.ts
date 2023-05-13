@@ -17,6 +17,7 @@ import { FilmDetailComponent } from './media/film/film-detail/film-detail.compon
 import { ItemListComponent } from './tool/item-list/item-list.component';
 import { WatchlistListComponent } from './watchlist/watchlist-list/watchlist-list.component';
 import { UserConfigurationComponent } from './home/user-configuration/user-configuration.component';
+import { SearchbarComponent } from './tool/searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { UserConfigurationComponent } from './home/user-configuration/user-confi
     FilmDetailComponent,
     ItemListComponent,
     WatchlistListComponent,
-    UserConfigurationComponent
+    UserConfigurationComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,
