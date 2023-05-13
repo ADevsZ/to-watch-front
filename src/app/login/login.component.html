@@ -1,14 +1,29 @@
-<div>
-    <form #form="ngForm" (ngSubmit)="login(form)">
-        <h1>To-Watch</h1>
-        <div>
-            <input class="form-control" placeholder="Email" type="email" name="email" id="email" [(ngModel)]="user.email">
+<div class="login-box">
+    <form #form="ngForm">
+        <h2>To-Watch</h2>
+        <div class="user-box">
+            <input type="email" name="email" id="email" [(ngModel)]="user.email">
+            <label for="email">Email</label>
         </div>
-        <div>
-            <input class="form-control" placeholder="Password" type="password" name="password" id="password" [(ngModel)]="user.password">
+        <div class="user-box">
+            <input type="password" name="password" id="password" [(ngModel)]="user.password">
+            <label for="password">Contraseña</label>
         </div>
-        <div>
-            <button class="btn btn-primary">Login</button>
+        <div class="user-buttons">
+            <a>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Iniciar Sesión
+            </a>
+            <a (click)="login(form)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Registrarse
+            </a>
         </div>
     </form>
     <button class="btn btn-secondary" (click)="register()">Registrarse</button>
