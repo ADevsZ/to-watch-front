@@ -13,7 +13,11 @@ export class MediaService {
     return this.http.get("http://localhost:8080/api/media/films");
   }
 
-  getFilmById(id: number) {
-    return this.http.get(`http://localhost:8080/api/media/films/${id}`);
+  getAllSeries() {
+    return this.http.get("http://localhost:8080/api/media/series");
+  }
+
+  getMediaById(id: number) {
+    return this.http.get(`http://localhost:8080/api/media/${id}`);
   }
 }

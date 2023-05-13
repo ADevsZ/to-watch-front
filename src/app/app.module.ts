@@ -12,12 +12,13 @@ import { NavbarComponent } from './tool/navbar/navbar.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ToastComponent } from './tool/toast/toast.component';
 import { CardComponent } from './tool/card/card.component';
-import { FilmListComponent } from './media/film/film-list/film-list.component';
-import { FilmDetailComponent } from './media/film/film-detail/film-detail.component';
 import { ItemListComponent } from './tool/item-list/item-list.component';
 import { WatchlistListComponent } from './watchlist/watchlist-list/watchlist-list.component';
 import { UserConfigurationComponent } from './home/user-configuration/user-configuration.component';
 import { SearchbarComponent } from './tool/searchbar/searchbar.component';
+import { FilmListComponent } from './media/film-list/film-list.component';
+import { ItemDetailComponent } from './media/item-detail/item-detail.component';
+import { SerieListComponent } from './media/serie-list/serie-list.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +30,12 @@ import { SearchbarComponent } from './tool/searchbar/searchbar.component';
     ToastComponent,
     CardComponent,
     FilmListComponent,
-    FilmDetailComponent,
     ItemListComponent,
     WatchlistListComponent,
     UserConfigurationComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    ItemDetailComponent,
+    SerieListComponent
   ],
   imports: [
     BrowserModule,

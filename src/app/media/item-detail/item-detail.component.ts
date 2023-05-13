@@ -1,15 +1,13 @@
-import { HttpResponse } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Film } from 'src/app/model/Media';
 import { MediaService } from 'src/app/service/media.service';
 
 @Component({
-  selector: 'app-film-detail',
-  templateUrl: './film-detail.component.html',
-  styleUrls: ['./film-detail.component.css']
+  selector: 'app-item-detail',
+  templateUrl: './item-detail.component.html',
+  styleUrls: ['./item-detail.component.css']
 })
-export class FilmDetailComponent implements OnInit{
+export class ItemDetailComponent implements OnInit{
   id: any;
   media: any;
   image: any;
@@ -23,7 +21,7 @@ export class FilmDetailComponent implements OnInit{
         this.id = params['id'];
       });
   
-      this.mediaService.getFilmById(this.id).subscribe(response => {
+      this.mediaService.getMediaById(this.id).subscribe(response => {
         this.media = response;
       });
       this.image = `/assets/images/${this.id}-photo.jpg`;
