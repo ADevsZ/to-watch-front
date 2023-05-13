@@ -4,15 +4,18 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './helper/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { FilmListComponent } from './media/film/film-list/film-list.component';
-import { FilmDetailComponent } from './media/film/film-detail/film-detail.component';
+import { FilmListComponent } from './media/film-list/film-list.component';
+import { ItemDetailComponent } from './media/item-detail/item-detail.component';
+import { SerieListComponent } from './media/serie-list/serie-list.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'films', component: FilmListComponent, canActivate: [AuthGuard] },
-  { path: 'films/:id', component: FilmDetailComponent, canActivate: [AuthGuard] }
+  { path: 'series', component: SerieListComponent, canActivate: [AuthGuard] },
+  { path: 'films/:id', component: ItemDetailComponent, canActivate: [AuthGuard] },
+  { path: 'series/:id', component: ItemDetailComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

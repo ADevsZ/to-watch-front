@@ -12,8 +12,9 @@ import { NavbarComponent } from './tool/navbar/navbar.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ToastComponent } from './tool/toast/toast.component';
 import { CardComponent } from './tool/card/card.component';
-import { FilmListComponent } from './media/film/film-list/film-list.component';
-import { FilmDetailComponent } from './media/film/film-detail/film-detail.component';
+import { FilmListComponent } from './media/film-list/film-list.component';
+import { ItemDetailComponent } from './media/item-detail/item-detail.component';
+import { SerieListComponent } from './media/serie-list/serie-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FilmDetailComponent } from './media/film/film-detail/film-detail.compon
     ToastComponent,
     CardComponent,
     FilmListComponent,
-    FilmDetailComponent
+    ItemDetailComponent,
+    SerieListComponent
   ],
   imports: [
     BrowserModule,
