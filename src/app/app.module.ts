@@ -16,6 +16,7 @@ import { FilmListComponent } from './media/film/film-list/film-list.component';
 import { FilmDetailComponent } from './media/film/film-detail/film-detail.component';
 import { ItemListComponent } from './tool/item-list/item-list.component';
 import { WatchlistListComponent } from './watchlist/watchlist-list/watchlist-list.component';
+import { UserConfigurationComponent } from './home/user-configuration/user-configuration.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { WatchlistListComponent } from './watchlist/watchlist-list/watchlist-lis
     FilmListComponent,
     FilmDetailComponent,
     ItemListComponent,
-    WatchlistListComponent
+    WatchlistListComponent,
+    UserConfigurationComponent
   ],
   imports: [
     BrowserModule,
