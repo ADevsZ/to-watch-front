@@ -33,4 +33,8 @@ export class RegistrationComponent {
       this.router.navigate(['login']);
     })
   }
+
+  volver() {
+    this.router.navigate(['login']);
+  }
 }

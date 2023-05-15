@@ -1,27 +1,43 @@
-<div>
+<div class="register-form">
     <form #form="ngForm" (ngSubmit)="registration(form)">
         <h1>Registration</h1>
-        <div class="input-group flex-nowrap">
-            <input type="text" class="form-control" placeholder="Nombre" name="first_name" id="first_name"
-                [(ngModel)]="user.firstName">
+        <div class="input-form">
+            <input type="text" name="first_name" id="first_name"
+                [(ngModel)]="user.firstName" autocomplete="off" required="required">
+            <i class="bi bi-person-fill"></i>
+            <span>Nombre</span>
         </div>
-        <div class="input-group flex-nowrap">
-            <input type="text" class="form-control" placeholder="Apellidos" name="last_name" id="last_name"
-                [(ngModel)]="user.lastName">
+        <div class="input-form">
+            <input type="text" name="last_name" id="last_name"
+                [(ngModel)]="user.lastName" autocomplete="off" required="required">
+            <i class="bi bi-person-fill-lock"></i>
+            <span>Apellidos</span>
         </div>
-        <div class="input-group flex-nowrap">`
-            <span class="input-group-text" id="addon-wrapping">@</span>
-            <input type="text" class="form-control" placeholder="Nick de Usuario" name="login_name" id="login_name"
-                [(ngModel)]="user.loginName">
+        <div class="input-form">
+            <input type="text" name="login_name" id="login_name"
+                [(ngModel)]="user.loginName" autocomplete="off" required="required">
+            <i class="bi bi-envelope-at-fill"></i>
+            <span>Nick de Usuario</span>
         </div>
-        <div class="input-group flex-nowrap">
-            <input type="email" class="form-control" placeholder="Email" name="email" id="email"
-                [(ngModel)]="user.email">
+        <div class="input-form">
+            <input type="email" name="email" id="email"
+                [(ngModel)]="user.email" autocomplete="off" required="required">
+            <i class="bi bi-envelope-fill"></i>
+            <span>Correo electrónico</span>
         </div>
-        <div class="input-group flex-nowrap">
-            <input type="password" class="form-control" placeholder="Password" name="password" id="password"
-                [(ngModel)]="user.password">
+        <div class="input-form">
+            <input type="password" name="password" id="password"
+                [(ngModel)]="user.password" autocomplete="off" required="required">
+            <i class="bi bi-lock"></i>
+            <span>Escribir Contraseña</span>
         </div>
-        <button class="btn btn-primary">Registrar Usuario</button>
+        <div class="input-form">
+            <input type="password" name="repeat_password" id="repeat_password"
+             autocomplete="off" required="required">
+            <i class="bi bi-lock-fill"></i>
+            <span>Confirmar Contraseña</span>
+        </div>
+        <button class="button" (click)="registration(form)">Crear Cuenta</button>
+        <button class="button light" (click)="volver()">Atrás</button>
     </form>
 </div>
