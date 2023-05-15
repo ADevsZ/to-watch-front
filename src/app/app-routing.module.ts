@@ -10,6 +10,7 @@ import { SearchbarComponent } from './tool/searchbar/searchbar.component';
 import { FilmListComponent } from './media/film-list/film-list.component';
 import { ItemDetailComponent } from './media/item-detail/item-detail.component';
 import { SerieListComponent } from './media/serie-list/serie-list.component';
+import { CalendarComponent } from './tool/calendar/calendar.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'user-configuration', component: UserConfigurationComponent, canActivate: [AuthGuard] },
   { path: 'series', component: SerieListComponent, canActivate: [AuthGuard] },
   { path: 'films/:id', component: ItemDetailComponent, canActivate: [AuthGuard] },
-  { path: 'series/:id', component: ItemDetailComponent, canActivate: [AuthGuard] }
+  { path: 'series/:id', component: ItemDetailComponent, canActivate: [AuthGuard] },
+  { path: 'calendar', component: CalendarComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

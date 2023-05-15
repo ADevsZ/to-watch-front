@@ -19,6 +19,7 @@ import { SearchbarComponent } from './tool/searchbar/searchbar.component';
 import { FilmListComponent } from './media/film-list/film-list.component';
 import { ItemDetailComponent } from './media/item-detail/item-detail.component';
 import { SerieListComponent } from './media/serie-list/serie-list.component';
+import { CalendarComponent } from './tool/calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SerieListComponent } from './media/serie-list/serie-list.component';
     UserConfigurationComponent,
     SearchbarComponent,
     ItemDetailComponent,
-    SerieListComponent
+    SerieListComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
