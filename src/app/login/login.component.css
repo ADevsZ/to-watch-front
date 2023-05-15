@@ -1,3 +1,7 @@
+body {
+    background: #757780;
+}
+
 .login-box {
     position: absolute;
     top: 50%;
@@ -5,16 +9,17 @@
     width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, .5);
+    background: rgba(117, 119, 128, .5);
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    box-shadow: 0 15px 25px rgba(117, 119, 128, .6);
     border-radius: 10px;
 }
 
-h2 {
-    margin: 0 0 30px;
+.login-image img {
+    width: 100%;
+    margin: 0 0 50px;
     padding: 0;
-    color: #fff;
+    color: #DBD4D3;
     text-align: center;
 }
 
@@ -26,10 +31,10 @@ h2 {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
-    color: #fff;
+    color: #757780;
     margin-bottom: 30px;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #757780;
     outline: none;
     background: transparent;
 }
@@ -40,7 +45,7 @@ h2 {
     left: 0;
     padding: 10px 0;
     font-size: 16px;
-    color: #fff;
+    color: #757780;
     pointer-events: none;
     transition: .5s;
 }
@@ -49,19 +54,21 @@ h2 {
 .user-box input:valid ~ label {
     top: -20px;
     left: 0;
-    color: #03e9f4;
+    color: #387780;
     font-size: 12px;
 }
 
 .user-buttons { 
+    display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 a {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: #03e9f4;
+    color: #387780;
     font-size: 11px;
     text-decoration: none;
     text-transform: uppercase;
@@ -69,13 +76,14 @@ a {
     transition: .5s;
     margin-top: 15px;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 
 a:hover {
-    background: #03e9f4;
-    color: #fff;
+    background: #387780;
+    color: #DBD4D3;
     border-radius: 5px;
-    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+    box-shadow: 0 0 5px #387780, 0 0 25px #387780, 0 0 50px #387780, 0 0 100px #387780;
 }
 
 a span {
@@ -88,7 +96,7 @@ a span:nth-child(1) {
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
+    background: linear-gradient(90deg, transparent, #387780);
     animation: btn-anim1 1s linear infinite;
 }
 
@@ -106,7 +114,7 @@ a span:nth-child(2) {
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg, transparent, #03e9f4);
+    background: linear-gradient(180deg, transparent, #387780);
     animation: btn-anim2 1s linear infinite;
     animation-delay: .25s;
 }
@@ -125,7 +133,7 @@ a span:nth-child(3) {
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent, #03e9f4);
+    background: linear-gradient(270deg, transparent, #387780);
     animation: btn-anim3 1s linear infinite;
     animation-delay: .5s;
 }
@@ -144,7 +152,7 @@ a span:nth-child(4) {
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg, transparent, #03e9f4);
+    background: linear-gradient(360deg, transparent, #387780);
     animation: btn-anim4 1s linear infinite;
     animation-delay: .75s;
 }

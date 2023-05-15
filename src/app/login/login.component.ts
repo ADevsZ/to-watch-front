@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from '../model/User';
 import { UserService } from '../service/user.service';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../service/auth.service';
 
@@ -15,12 +15,20 @@ export class LoginComponent {
     email: '',
     password: ''
   };
+
+  myForm: FormGroup;
   
   constructor(
     private userService: UserService,
     private router: Router,
-    private authService: AuthService
-  ) {}
+    private authService: AuthService,
+    public fb: FormBuilder
+  ) {
+    this.myForm = this.fb.group({
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required]]
+    });
+  }
 
   login(form: NgForm) {
     console.log('form value', form.value);
