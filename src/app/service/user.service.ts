@@ -32,4 +32,9 @@ export class UserService {
   getTokenUser(): any {
     return localStorage.getItem('token');
   }
+
+  getNickName(): Observable<any> {
+    let token = localStorage.getItem("token");
+    return this.http.get(`http://localhost:8080/api/user/nick?token=${token}`);
+  }
 }
