@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,7 @@ import { SearchbarComponent } from './tool/searchbar/searchbar.component';
 import { FilmListComponent } from './media/film-list/film-list.component';
 import { ItemDetailComponent } from './media/item-detail/item-detail.component';
 import { SerieListComponent } from './media/serie-list/serie-list.component';
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -35,13 +36,15 @@ import { SerieListComponent } from './media/serie-list/serie-list.component';
     UserConfigurationComponent,
     SearchbarComponent,
     ItemDetailComponent,
-    SerieListComponent
+    SerieListComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

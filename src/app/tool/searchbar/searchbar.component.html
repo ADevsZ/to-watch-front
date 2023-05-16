@@ -1,6 +1,6 @@
 <div class="container">
-    <form class="search-box">
-        <input type="text" placeholder=" "/>
+    <form class="search-box" [formGroup]="searchForm">
+        <input type="text" placeholder=" " formControlName="search"/>
         <button type="reset"></button>
       </form>
 </div>
