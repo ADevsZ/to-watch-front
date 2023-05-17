@@ -19,6 +19,9 @@ import { SearchbarComponent } from './tool/searchbar/searchbar.component';
 import { FilmListComponent } from './media/film-list/film-list.component';
 import { ItemDetailComponent } from './media/item-detail/item-detail.component';
 import { SerieListComponent } from './media/serie-list/serie-list.component';
+import { WatchlistActiveComponent } from './watchlist/active/watchlist-active/watchlist-active.component';
+import { WatchlistEditComponent } from './watchlist/edit/watchlist-edit/watchlist-edit.component';
+import { WatchlistDetailComponent } from './watchlist/detail/watchlist-detail/watchlist-detail.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { SerieListComponent } from './media/serie-list/serie-list.component';
     UserConfigurationComponent,
     SearchbarComponent,
     ItemDetailComponent,
-    SerieListComponent
+    SerieListComponent,
+    WatchlistActiveComponent,
+    WatchlistEditComponent,
+    WatchlistDetailComponent
   ],
   imports: [
     BrowserModule,
