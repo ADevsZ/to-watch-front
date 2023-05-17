@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     padding: 0;
     display: flex;
@@ -7,7 +7,7 @@ body {
     height: 100vh;
     font-family: sans-serif;
     background: #153467;
-}
+} */
 
 .menu {
     background: #fff;
@@ -34,6 +34,7 @@ ul li {
     list-style: none;
     padding: 5px 0;
     font-size: 16px;
+    display: flex;
 }
 
 ul li input[type="checkbox"] {

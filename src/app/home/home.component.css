@@ -2,6 +2,8 @@
     background: #DBD4D3;
     color: #387780;
     margin: 20px;
+    height: 100vh;
+    width: 100%;
 }
 
 .col { 

@@ -23,6 +23,8 @@ import { CalendarComponent } from './tool/calendar/calendar.component';
 import { WatchlistActiveComponent } from './watchlist/active/watchlist-active/watchlist-active.component';
 import { WatchlistEditComponent } from './watchlist/edit/watchlist-edit/watchlist-edit.component';
 import { WatchlistDetailComponent } from './watchlist/detail/watchlist-detail/watchlist-detail.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { WatchlistDetailComponent } from './watchlist/detail/watchlist-detail/wa
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
