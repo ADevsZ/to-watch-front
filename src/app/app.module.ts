@@ -20,6 +20,9 @@ import { FilmListComponent } from './media/film-list/film-list.component';
 import { ItemDetailComponent } from './media/item-detail/item-detail.component';
 import { SerieListComponent } from './media/serie-list/serie-list.component';
 import { CalendarComponent } from './tool/calendar/calendar.component';
+import { WatchlistActiveComponent } from './watchlist/active/watchlist-active/watchlist-active.component';
+import { WatchlistEditComponent } from './watchlist/edit/watchlist-edit/watchlist-edit.component';
+import { WatchlistDetailComponent } from './watchlist/detail/watchlist-detail/watchlist-detail.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { CalendarComponent } from './tool/calendar/calendar.component';
     SearchbarComponent,
     ItemDetailComponent,
     SerieListComponent,
-    CalendarComponent
+    CalendarComponent,
+    WatchlistActiveComponent,
+    WatchlistEditComponent,
+    WatchlistDetailComponent
   ],
   imports: [
     BrowserModule,

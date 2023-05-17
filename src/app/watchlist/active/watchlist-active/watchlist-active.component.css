@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    background: #153467;
+}
+
+.menu {
+    background: #fff;
+}
+
+h2 {
+    margin: 0;
+    padding: 15px 60px;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+ul {
+    margin: 0;
+    padding: 10px 20px;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    border-top: none;
+}
+
+ul li {
+    list-style: none;
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+ul li input[type="checkbox"] {
+    display: none;
+}
+
+ul li span.list {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0 5px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+ul li input[type="checkbox"]:checked ~ span.list {
+    color: #ccc;
+    transition-delay: 0s;
+}
+
+ul li span.list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    background: #808386;
+    transition-delay: 0.5s;
+}
+
+ul li input[type="checkbox"]:checked ~ span.list:before {
+    left: 100%;
+    transition-delay: 0s;
+}
+
+ul li span.list::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transition: .5s;
+    transform-origin: left;
+    transform: scaleX(0);
+    background: #000;
+    transition-delay: 0s;
+}
+
+ul li input[type="checkbox"]:checked ~ span.list:after {
+    transform: scaleX(1);
+    transition-delay: 0.5s;
+}
+
+ul li span.icon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    border: 1px solid#262626;
+    display: inline-block;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+ul li span.icon::before {
+    content: 'x';
+    position: absolute;
+    top: -2px;
+    left: 4px;
+    transform: translateY(-100%);
+    transition: 0.5s;
+}
+
+ul li input[type="checkbox"]:checked ~ span.icon::before {
+    transform: translateY(0);
+}
