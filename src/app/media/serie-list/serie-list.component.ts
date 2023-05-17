@@ -8,6 +8,7 @@ import { MediaService } from 'src/app/service/media.service';
 })
 export class SerieListComponent implements OnInit{
   series: any;
+  public page!: number;
 
   constructor(
     private mediaService: MediaService

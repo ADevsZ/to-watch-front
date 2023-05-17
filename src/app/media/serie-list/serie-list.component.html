@@ -1,5 +1,8 @@
-<div class="row m-0 container my-4 d-flex justify-content-center flex-wrap">
-    <div class="col-4 mt-2" *ngFor="let media of series">
+<app-searchbar></app-searchbar>
+<div class="contenedor">
+    <div class="" *ngFor="let media of series | paginate: { itemsPerPage: 3, currentPage: page }">
         <app-card [media]="media"></app-card>
     </div>
 </div>
+
+<pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
