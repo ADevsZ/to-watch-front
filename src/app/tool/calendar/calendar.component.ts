@@ -18,7 +18,9 @@ export class CalendarComponent implements OnInit, OnDestroy{
     event: CalendarEvent
   };
 
-  
+  dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
+    
+  }
 
   constructor () { 
   }
