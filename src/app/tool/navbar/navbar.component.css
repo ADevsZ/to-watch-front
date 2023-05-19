@@ -1,9 +1,14 @@
 img { 
     width: 60px;
 }
+nav {
+    background-color: #757780;
+}
 
 label { 
     margin: 10px;
     font-size: 15px;
     font-weight: bold;
 }
+
+li a { color: #DBD4D3; }
