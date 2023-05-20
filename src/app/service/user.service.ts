@@ -33,6 +33,10 @@ export class UserService {
     return localStorage.getItem('token');
   }
 
+  getUserByToken(token: any): Observable<any> {
+    return this.http.get(`http://localhost:8080/api/user/?token=${token}`);
+  }
+
   userRegistration(user: UserRegistration): Observable<any> {
     return this.http.post("http://localhost:8080/api/user/register", user);
   }
@@ -40,5 +44,9 @@ export class UserService {
   getNickName(): Observable<any> {
     let token = localStorage.getItem("token");
     return this.http.get(`http://localhost:8080/api/user/nick?token=${token}`);
+  }
+
+  getAllUserLogs(userId: any): Observable<any> {
+    return this.http.get(`http://localhost:8080/api/user/${userId}/logs`);
   }
 }

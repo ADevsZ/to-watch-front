@@ -40,3 +40,7 @@
     margin: 5px;
     padding: 10px;
 }
+
+li {
+    text-align: start;
+}

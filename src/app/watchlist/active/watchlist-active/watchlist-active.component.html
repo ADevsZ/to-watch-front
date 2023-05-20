@@ -1,25 +1,11 @@
 <div class="menu">
-    <h2>Watchlist Activo</h2>
+    <h2>{{ watchlistActive.watchlistName }}</h2>
     <ul>
-        <li>
+        <li *ngFor="let wm of watchlistActive.mediaList">
             <label>
-                <input type="checkbox" name="">
+                <input type="checkbox" name="" [checked]="wm.viewed">
                 <span class="icon"></span>
-                <span class="list">Avatar</span>
-            </label>
-        </li>
-        <li>
-            <label>
-                <input type="checkbox" name="" checked disabled>
-                <span class="icon"></span>
-                <span class="list">La Casa del Dragón</span>
-            </label>
-        </li>
-        <li>
-            <label>
-                <input type="checkbox" name="">
-                <span class="icon"></span>
-                <span class="list">The Last of Us</span>
+                <span class="list">{{wm.orden}}. {{ wm.mediaTitle }}</span>
             </label>
         </li>
     </ul>
