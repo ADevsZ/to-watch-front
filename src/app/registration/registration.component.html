@@ -1,43 +1,48 @@
 <div class="register-form">
-    <form #form="ngForm" (ngSubmit)="registration(form)">
-        <h1>Registration</h1>
+    <form>
+        <div class="register-title">
+            <h1>Registration</h1>
+        </div>
         <div class="input-form">
-            <input type="text" name="first_name" id="first_name"
-                [(ngModel)]="user.firstName" autocomplete="off" required="required">
+            <input type="text" name="first_name" id="first_name" formControlName="first_name"
+                autocomplete="off" required="required">
             <i class="bi bi-person-fill"></i>
             <span>Nombre</span>
         </div>
         <div class="input-form">
-            <input type="text" name="last_name" id="last_name"
-                [(ngModel)]="user.lastName" autocomplete="off" required="required">
+            <input type="text" name="last_name" id="last_name" formControlName="last_name"
+                autocomplete="off" required="required">
             <i class="bi bi-person-fill-lock"></i>
             <span>Apellidos</span>
         </div>
         <div class="input-form">
-            <input type="text" name="login_name" id="login_name"
-                [(ngModel)]="user.loginName" autocomplete="off" required="required">
+            <input type="text" name="login_name" id="login_name" formControlName="login_name"
+                autocomplete="off" required="required">
             <i class="bi bi-envelope-at-fill"></i>
             <span>Nick de Usuario</span>
         </div>
         <div class="input-form">
-            <input type="email" name="email" id="email"
-                [(ngModel)]="user.email" autocomplete="off" required="required">
+            <input type="email" name="email" id="email" formControlName="email"
+                autocomplete="off" required="required">
             <i class="bi bi-envelope-fill"></i>
             <span>Correo electrónico</span>
         </div>
         <div class="input-form">
-            <input type="password" name="password" id="password"
-                [(ngModel)]="user.password" autocomplete="off" required="required">
+            <input type="password" name="password" id="password" formControlName="password"
+                autocomplete="off" required="required">
             <i class="bi bi-lock"></i>
             <span>Escribir Contraseña</span>
         </div>
         <div class="input-form">
-            <input type="password" name="repeat_password" id="repeat_password"
+            <input type="password" name="repeat_password" id="repeat_password" formControlName="repeat_password"
              autocomplete="off" required="required">
             <i class="bi bi-lock-fill"></i>
             <span>Confirmar Contraseña</span>
         </div>
-        <button class="button" (click)="registration(form)">Crear Cuenta</button>
-        <button class="button light" (click)="volver()">Atrás</button>
+        <div class="register-buttons">
+            <button type="submit" class="button light" (click)="volver()">Volver</button>
+            <button type="reset" class="button danger">Limpiar</button>
+            <button type="submit" class="button">Crear Cuenta</button>
+        </div>
     </form>
 </div>

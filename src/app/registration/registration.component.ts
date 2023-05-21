@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
-import { UserService } from '../service/user.service';
-import { NgForm } from '@angular/forms';
-import { UserRegistration } from '../model/User';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-declare function toastCall(): void;
 
 @Component({
   selector: 'app-registration',
@@ -11,27 +8,28 @@ declare function toastCall(): void;
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
-  user: UserRegistration = {
-    firstName: '',
-    lastName: '',
-    loginName: '',
-    password: '',
-    email: ''
-  }
-
+  form!: FormGroup;
   toastVar: any;
 
   constructor(
-    private userService: UserService,
-    private router: Router
+    private router: Router,
+    private fb: FormBuilder
   ) {
+    // this.crearForm();
   }
 
-  registration(form: NgForm) {
-    this.userService.userRegistration(this.user).subscribe(response => {
-      // toastCall();
-      this.router.navigate(['login']);
-    })
+  registration() {
+  }
+
+  crearForm() {
+    this.form = this.fb.group({
+      first_name: [''],
+      last_name: [''],
+      login_name: [''],
+      email: [''],
+      password: [''],
+      repeat_password: ['']
+    });
   }
 
   volver() {
