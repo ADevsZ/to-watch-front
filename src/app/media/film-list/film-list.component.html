@@ -1,8 +1,0 @@
-<app-searchbar></app-searchbar>
-<div class="contenedor">
-    <div *ngFor="let media of films | paginate: { itemsPerPage: 3, currentPage: page }">
-        <app-card [media]="media"></app-card>
-    </div>
-</div>
-
-<pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>

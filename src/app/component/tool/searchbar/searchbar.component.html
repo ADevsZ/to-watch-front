@@ -1,0 +1,14 @@
+<div class="sarchbar-container">
+  <div class="ng-autocomplete">
+    <ng-autocomplete [data]="media" placeholder="Seleccione media..." [searchKeyword]="keyword"
+      [itemTemplate]="foundView" [notFoundTemplate]="notFoundView" (selected)="selectEvent($event)"></ng-autocomplete>
+
+    <ng-template #foundView let-item>
+      <a [innerHTML]="item.title"></a>
+    </ng-template>
+
+    <ng-template #notFoundView let-notFound>
+      <div [innerHTML]="notFound"></div>
+    </ng-template>
+  </div>
+</div>

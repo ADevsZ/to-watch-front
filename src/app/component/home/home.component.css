@@ -1,0 +1,27 @@
+.home-container {
+    background: #DBD4D3;
+    padding: 20px;
+}
+
+.home-row {
+	border-radius: 20px;
+	border: 5px solid #387780;
+	box-shadow: 
+	-5px -5px 15px rgba(255, 255, 255, 0.1),
+	5px 5px 15px rgba(0, 0, 0, 0.35),
+	inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+	inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+	width: 100%;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+	background-color: #D2CCA1;
+}
+
+.home-row-top {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}

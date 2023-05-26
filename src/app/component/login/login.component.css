@@ -1,0 +1,103 @@
+.login-box {
+    background: rgba(117, 119, 128, .5);
+    box-shadow: 0 15px 25px rgba(117, 119, 128, .6);
+    border-radius: 20px;
+    display: flex;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px;
+    border-radius: 20px;
+	border: 5px solid #387780;
+	box-shadow: 
+	-5px -5px 15px rgba(255, 255, 255, 0.1),
+	5px 5px 15px rgba(0, 0, 0, 0.35),
+	inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+	inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+    background: #DBD4D3;
+}
+
+.login-image img {
+    width: 20%;
+    margin: 0 0 50px;
+    padding: 0;
+    text-align: center;
+}
+
+.user-box {
+    position: relative;
+    width: 100%;
+}
+
+.user-box input {
+    padding: 12px 10px 12px 48px;
+    border: none;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #757780;
+    font-weight: 300;
+    border-radius: 20px;
+    font-size: 1em;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+    outline: none;
+}
+
+.user-box span {
+    position: absolute;
+    left: 0;
+    padding: 12px 10px 12px 48px;
+    pointer-events: none;
+    font-size: 1em;
+    font-weight: 300;
+    transition: 0.5s;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.user-box input:focus ~ span,
+.user-box input:valid ~ span {
+    color: #fff;
+    font-size: 0.6em;
+    border: 1px solid #757780;
+    background: #757780;
+    padding: 0 8px;
+    border-radius: 10px;
+    transform: translateX(25px) translateY(-7px);
+}
+
+.user-box input:valid,
+.user-box input:focus{
+    border: 1px solid #757780;
+}
+
+.user-box i {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 25px;
+    padding: 2px 0;
+    padding-right: 8px;
+    color: #757780;
+    border-right: 1px solid #757780;
+}
+
+.user-buttons { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    position: relative;
+    padding: 10px 20px;
+    color: #387780;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    border: 1px solid #387780;
+    border-radius: 20px;
+}

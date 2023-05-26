@@ -1,0 +1,61 @@
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-12">
+            <button class="btn btn-primary" (click)="volver()">Volver</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <img [src]="image" alt="">
+        </div>
+        <div class="col-8">
+            <h1 class="display-1">{{ media.title }}</h1>
+            <p>
+                <strong>País:</strong>
+                {{ media.nationality }}
+            </p>
+            <p>
+                <strong>Duración:</strong>
+                {{ media.duration }}
+            </p>
+            <p>
+                <strong>Fecha de Estreno:</strong>
+                {{ media.releaseDate | date: 'dd/MM/yyyy'}}
+            </p>
+            <p>
+                <strong>Sinopsis:</strong>
+                {{ media.synopsis }}
+            </p>
+            <p *ngIf="media.type == 'Film'">
+                <strong>Duración:</strong>
+                {{ media.duration }} min
+            </p>
+            <p *ngIf="media.type == 'Serie'">
+                <strong>Duración media por Capítulo:</strong>
+                {{ media.averageDuration }} min
+            </p>
+            <p *ngIf="media.type == 'Serie'">
+                <strong>Número de temporadas:</strong>
+                {{ media.sessionsNumber }}
+            </p>
+            <p *ngIf="media.type == 'Serie'">
+                <strong>Número total de Capítulos:</strong>
+                {{ media.episodesNumber }}
+            </p>
+            <div>
+                <app-rating-media></app-rating-media>
+                <div class="media-average-rating">
+                    <p><strong>Media de la Comunidad: </strong>{{averageRating}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="media-detail-footer-container">
+            <div *ngFor="let sp of streamingPlatforms" class="media-detail-footer">
+                <a *ngIf="sp.platformName=='Netflix'" class="btn btn-danger" href={{sp.url}} target="_blank">Netflix</a>
+                <a *ngIf="sp.platformName=='HBO Max'" class="btn btn-secondary" href={{sp.url}} target="_blank">HBO Max</a>
+                <a *ngIf="sp.platformName=='Prime Video'" class="btn btn-primary" href={{sp.url}} target="_blank">Prime Video</a>
+                <a *ngIf="sp.platformName=='Disney+'" class="btn btn-light" href={{sp.url}} target="_blank">Disney +</a>
+            </div>
+        </div>
+    </div>
+</div>

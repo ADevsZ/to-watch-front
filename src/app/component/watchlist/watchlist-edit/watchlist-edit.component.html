@@ -1,0 +1,36 @@
+<div class="watchlist-edit-container">
+  <div>
+    <h1></h1>
+  </div>
+  <div class="watchlist-edit-header-buttons">
+    <button class="btn btn-primary btn-volver" routerLink="/watchlists">Volver</button>
+    <button *ngIf="!isActive" class="btn btn-danger" (click)="deleteWatchlist()">Eliminar Watchlist</button>
+    <button *ngIf="!isActive" class="btn btn-success" (click)="activateWatchlist()">Activar Watchlist</button>
+    <button *ngIf="isActive" class="btn btn-light"(click)="desactivatedWatchlist()" >Desactivar Watchlist</button>
+  </div>
+  <div class="watchlist-edit-table">
+    <table class="table table-striped">
+      <thead>
+          <tr>
+            <th scope="col">Orden</th>
+            <th scope="col">ID</th>
+            <th scope="col">Título</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Año de Estreno</th>
+            <th scope="col">Visto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let wm of watchlistMedia | paginate: { itemsPerPage: 10, currentPage: watchlistPage }">
+            <th scope="row">{{wm.orden}}</th>
+            <td>{{wm.mediaId}}</td>
+            <td>{{wm.mediaTitle}}</td>
+            <td>{{wm.type == 'Film' ? 'Película' : 'Serie'}}</td>
+            <td>{{wm.releaseDate}}</td>
+            <td>{{wm.viewed ? 'SI' : 'NO'}}</td>
+          </tr>
+        </tbody>
+  </table>
+  </div>
+  <pagination-controls (pageChange)="watchlistPage = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+</div>

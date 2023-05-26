@@ -1,0 +1,19 @@
+<div class="rating-box">
+    <header>Valoración:</header>
+    <div *ngIf="rateMedia$ == 0" class="stars">
+        <i class="bi bi-star-fill" (click)="ratingMedia(1, true)"></i>
+        <i class="bi bi-star-fill" (click)="ratingMedia(2, true)"></i>
+        <i class="bi bi-star-fill" (click)="ratingMedia(3, true)"></i>
+        <i class="bi bi-star-fill" (click)="ratingMedia(4, true)"></i>
+        <i class="bi bi-star-fill" (click)="ratingMedia(5, true)"></i>
+    </div>
+
+    <div *ngIf="rateMedia$ != 0" class="stars">
+        <div *ngFor="let r of rateMedia">
+            <i class="bi bi-star-fill active"></i>
+        </div>
+        <div *ngFor="let r of restRateMedia">
+            <i class="bi bi-star-fill"></i>
+        </div>
+    </div>
+</div>

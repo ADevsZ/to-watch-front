@@ -1,0 +1,25 @@
+<div class="login-box">
+    <form #form="ngForm">
+        <div class="login-image">
+            <img src="/assets/images/main-logo.png" alt="">
+        </div>
+        <div class="user-box">
+            <input type="email" name="email" id="email" autocomplete="off" [(ngModel)]="user.email">
+            <i class="bi bi-envelope-fill"></i>
+            <span>Correo electrónico</span>
+        </div>
+        <div class="user-box">
+            <input type="password" name="password" id="password" [(ngModel)]="user.password">
+            <i class="bi bi-lock"></i>
+            <span>Escribir Contraseña</span>
+        </div>
+        <div class="btn user-buttons">
+            <a class="btn" (click)="login(form)">
+                Iniciar Sesión
+            </a>
+            <a class="btn" (click)="register()">
+                Registrarse
+            </a>
+        </div>
+    </form>
+</div>

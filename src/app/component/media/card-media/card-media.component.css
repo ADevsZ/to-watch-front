@@ -1,0 +1,58 @@
+.card {
+    border: 2px solid black;
+    margin: 5px;
+    box-shadow: 
+	-5px -5px 15px rgba(255, 255, 255, 0.1),
+	5px 5px 15px rgba(0, 0, 0, 0.35),
+	inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+	inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+}
+
+.card-header {
+    align-self: center;
+    background: #E83151;
+    border-radius: 17px 17px 0 0;
+}
+
+.card-header img {
+    height: 270px;
+    width: 180px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.card-body {
+    border-top: 2px solid black;
+}
+
+.card-body h3 {
+    text-align: center;
+    font-size: larger;
+    color: #DBD4D3;
+    max-width: 180px;
+}
+
+.card-body p {
+    text-align: center;
+}
+
+.card-body, .card-button {
+    background: #387780;
+}
+
+.card-button {
+    text-align: center;
+    width: 100%;
+    border-radius: 0 0 17px 17px;
+}
+
+.card-button button {
+    margin-bottom: 15px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+}

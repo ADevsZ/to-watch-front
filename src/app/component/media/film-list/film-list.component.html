@@ -1,0 +1,13 @@
+<div class="pelicula-list-container">
+    <div class="pelicula-list-searchbar">
+        <app-searchbar [media]="films"></app-searchbar>
+    </div>
+    <div class="pelicula-list-items">
+        <div *ngFor="let media of films | paginate: { itemsPerPage: 5, currentPage: filmsPage }">
+            <app-card-media [media]="media"></app-card-media>
+        </div>
+    </div>
+    <div>
+        <pagination-controls (pageChange)="filmsPage = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+    </div>
+</div>

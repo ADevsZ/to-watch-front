@@ -1,0 +1,11 @@
+<div class="watchlist-list-container">
+    <div *ngIf="noHaveWatchlist" class="watchlist-list-items">
+        <div *ngFor="let w of watchlists | paginate: { itemsPerPage: 5, currentPage: pageWatchlist } ">
+            <app-watchlist-card [watchlist]="w"></app-watchlist-card>
+        </div>
+    </div>
+    <div *ngIf="!noHaveWatchlist" class="not-active">
+        <p>El usuario no tiene ningún Watchlist creado.</p>
+    </div>
+    <pagination-controls (pageChange)="pageWatchlist = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+</div>

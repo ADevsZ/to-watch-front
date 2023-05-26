@@ -1,0 +1,26 @@
+<div class="row text-center">
+  <div class="col-md-4">
+    <div class="btn-group">
+      <div class="btn btn-primary btn-sm" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate"
+        (viewDateChange)="closeOpenMonthViewDay()">
+        Anterior
+      </div>
+      <div class="btn btn-outline-secondary btn-sm" mwlCalendarToday [(viewDate)]="viewDate">
+        Hoy
+      </div>
+      <div class="btn btn-primary btn-sm" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate"
+        (viewDateChange)="closeOpenMonthViewDay()">
+        Siguiente
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h4>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h4>
+  </div>
+</div>
+<br />
+<div class="calendar-container" [ngSwitch]="view">
+  <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate" [events]="events"
+    [refresh]="refresh" [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)">
+  </mwl-calendar-month-view>
+</div>

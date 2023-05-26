@@ -1,0 +1,18 @@
+<div *ngIf="haveActiveWatchlist" class="menu">
+    <h2>{{ watchlistActiveTitle }}</h2>
+    <ul>
+        <div *ngFor="let wm of mediaList">
+            <li>
+                <label>
+                    <input type="checkbox" name="" [checked]="wm.viewed" (click)="updateViewedMedia(wm.mediaId, !wm.viewed, wm.type, wm.mediaTitle)" [disabled]="wm.viewed === true">
+                    <span class="icon"  disabled></span>
+                    <span class="list">{{wm.orden}}. {{ wm.mediaTitle }} ({{ wm.type === 'Film' ? 'Película' : 'Serie' }})</span>
+                </label>
+            </li>
+        </div>
+    </ul>
+</div>
+
+<div *ngIf="!haveActiveWatchlist" class="not-active">
+    <p>El usuario no tiene ningún Watchlist activo.</p>
+</div>

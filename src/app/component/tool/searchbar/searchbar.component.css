@@ -1,0 +1,11 @@
+.sarchbar-container {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background: #757780;
+    position: relative;
+}

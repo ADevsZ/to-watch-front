@@ -1,0 +1,23 @@
+<div *ngIf="showTable">
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Fecha de Creación</th>
+        <th scope="col">Código de Actividad</th>
+        <th scope="col">Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let log of userLogs | paginate: { itemsPerPage: 3, currentPage: logsPage }">
+        <th scope="row">{{ log.creationDate | date: 'yyyy/MM/dd HH:mm:ss' }}</th>
+        <td>{{ log.code }}</td>
+        <td>{{ log.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="logsPage = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+</div>
+
+<div *ngIf="!showTable">
+  <p>No hay actividad reciente del usuario.</p>
+</div>

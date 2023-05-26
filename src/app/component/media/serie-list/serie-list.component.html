@@ -1,0 +1,13 @@
+<div class="serie-list-container">
+    <div class="serie-list-searchbar">
+        <app-searchbar [media]="series"></app-searchbar>
+    </div>
+    <div class="serie-list-items">
+        <div *ngFor="let media of series | paginate: { itemsPerPage: 5, currentPage: seriesPage }">
+            <app-card-media [media]="media"></app-card-media>
+        </div>
+    </div>
+    <div>
+        <pagination-controls (pageChange)="seriesPage = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+    </div>
+</div>

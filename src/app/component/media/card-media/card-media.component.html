@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card-header">
+        <img src="/assets/images/{{this.media.mediaId}}-photo.jpg" class="card-img-top" alt="/assets/images/00-photo.png">
+    </div>
+    <div class="card-body">
+        <h3>{{ media.title }}</h3>
+        <p>{{ media.releaseDate | date: 'yyyy'}}</p>
+    </div>
+    <div class="card-button">
+        <button class="btn btn-primary" [routerLink]="[media.mediaId]">Ver</button>
+    </div>
+</div>

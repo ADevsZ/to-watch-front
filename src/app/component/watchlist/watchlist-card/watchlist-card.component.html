@@ -1,0 +1,8 @@
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{watchlist.name}}</h5>
+      <p class="card-text">Número de Películas/Series: {{watchlist.mediaCount}}</p>
+      <p class="card-text">Activo: <span id="activo" *ngIf="watchlist.active">SI</span><span id="inactivo" *ngIf="!watchlist.active">NO</span></p>
+      <a class="btn btn-primary" [routerLink]="watchlist.watchlistId">Visualizar</a>
+    </div>
+  </div>

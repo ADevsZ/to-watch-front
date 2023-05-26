@@ -1,0 +1,49 @@
+<div class="register-form">
+    <form [formGroup]="form" (ngSubmit)="registration()">
+        <div class="register-title">
+            <h1>Registration</h1>
+        </div>
+        <div class="input-form">
+            <input type="text" name="first_name" id="first_name" formControlName="first_name" [class.is-invalid]="firstNameValid"
+                autocomplete="off" required="required">
+            <i class="bi bi-person-fill"></i>
+            <span>Nombre</span>
+            <small *ngIf="firstNameValid" class="text-danger">El Nombre debe tener un mínimo de 3 caracteres.</small>
+        </div>
+        <div class="input-form">
+            <input type="text" name="last_name" id="last_name" formControlName="last_name" [class.is-invalid]="lastNameValid"
+                autocomplete="off" required="required">
+            <i class="bi bi-person-fill-lock"></i>
+            <span>Apellidos</span>
+            <small *ngIf="lastNameValid" class="text-danger">Los Apellidos debe tener un mínimo de 3 caracteres.</small>
+        </div>
+        <div class="input-form">
+            <input type="text" name="login_name" id="login_name" formControlName="login_name" [class.is-invalid]="loginNameValid"
+                autocomplete="off" required="required">
+            <i class="bi bi-envelope-at-fill"></i>
+            <span>Nick de Usuario</span>
+            <small *ngIf="loginNameValid" class="text-danger">El Nick de Usuario introducido no es válido.</small>
+            <br>
+            <small>Debe empezar con el caracter '@' y debe tener entre 5 y 30 caracteres.</small>
+        </div>
+        <div class="input-form">
+            <input type="email" name="email" id="email" formControlName="email" [class.is-invalid]="emailValid"
+                autocomplete="off" required="required">
+            <i class="bi bi-envelope-fill"></i>
+            <span>Correo electrónico</span>
+            <small *ngIf="emailValid" class="text-danger">Introduce un Email válido.</small>
+        </div>
+        <div class="input-form">
+            <input type="password" name="password" id="password" formControlName="password" [class.is-invalid]="passwordValid"
+                autocomplete="off" required="required">
+            <i class="bi bi-lock"></i>
+            <span>Escribir Contraseña</span>
+            <small *ngIf="passwordValid" class="text-danger">La Contraseña debe tener un mínimo de 5 caracteres.</small>
+        </div>
+        <div class="register-buttons">
+            <button type="submit" class="btn btn-light button" (click)="volver()">Volver</button>
+            <button type="button" class="btn btn-danger button" (click)="clearValues()">Limpiar</button>
+            <button type="submit" class="btn btn-warning button">Crear Cuenta</button>
+        </div>
+    </form>
+</div>
